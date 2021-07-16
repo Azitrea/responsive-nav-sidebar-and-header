@@ -1,1 +1,26 @@
-<p>nav2 works!</p>
+<nav class="sidebar" [ngClass]="{ 'closed': isOpen }">
+  <div class="menu-setup">
+    <div>Profile</div>
+    <div>
+      <div>menu 1</div>
+      <div>menu 1</div>
+      <div>menu 1</div>
+      <div>menu 1</div>
+      <div>menu 1</div>
+      <div>menu 1</div>
+    </div>
+  </div>
+</nav>
+
+<header class="header">
+  <div class="header-content">
+    <button (click)="toggleSideNav()">{{ isOpen ? 'Open' : 'Close' }}</button>
+    <div>Header</div>
+  </div>
+</header>
+
+<div class="main-content">
+  Main content
+  <!-- TEST DATA -->
+  <app-test-content></app-test-content>
+</div>
