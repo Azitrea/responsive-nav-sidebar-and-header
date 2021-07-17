@@ -1,5 +1,5 @@
 $sidebar-width-open: 14rem;
-$sidebar-width-closed: 4.5rem;
+$sidebar-width-closed: 0rem;
 
 $header-height: 3rem;
 
@@ -14,14 +14,21 @@ $nav-header-color: #628bb1;
   z-index: 10;
   height: 100vh;
   position: fixed;
-  transition: width .3s ease;
+  transition: width 0.3s ease;
   width: $sidebar-width-open;
+}
+
+.menu {
+  padding: 1rem 0 0 1rem;
+  overflow: hidden;
+}
+
+.menu-item {
+  display: flex;
   
-  .menu-setup {
-    padding: 1rem 0 0 1rem;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
+  span {
+    padding-left: 0.5rem;
+    white-space: nowrap;
   }
 }
 
@@ -38,25 +45,25 @@ $nav-header-color: #628bb1;
   z-index: 9;
   top: 0;
   width: 100%;
+}
 
-  .header-content {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header-content {
+  color: white;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    padding: 0 1rem 0 1rem;
-  }
+  padding: 0 1rem 0 1rem;
 }
 
 // Main content
 .main-content {
   margin-left: $sidebar-width-open;
   margin-top: $header-height;
-  transition: margin .3s ease;
+  transition: margin 0.3s ease;
 }
 
 .sidebar.closed ~ .main-content {
   margin-left: $sidebar-width-closed;
 }
-
