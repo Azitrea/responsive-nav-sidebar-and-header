@@ -1,0 +1,31 @@
+$header-height: 3rem;
+
+$nav-header-color: #628bb1;
+$nav-hover-bg-color: #74a3cf;
+
+// Header
+.header {
+  height: $header-height;
+  background-color: $nav-header-color;
+
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  width: 100%;
+}
+
+.header-content {
+  color: white;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 0 1rem 0 1rem;
+}
+
+// Main content
+.main-content {
+  margin-top: $header-height;
+  transition: margin 0.3s ease;
+}
