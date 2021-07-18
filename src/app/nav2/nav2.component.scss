@@ -1,5 +1,5 @@
 $sidebar-width-open: 14rem;
-$sidebar-width-closed: 0rem;
+$sidebar-width-closed: 4rem;
 
 $header-height: 3rem;
 
@@ -19,13 +19,14 @@ $nav-header-color: #628bb1;
 }
 
 .menu {
+  height: 100%;
   padding: 1rem 0 0 1rem;
   overflow: hidden;
 }
 
 .menu-item {
   display: flex;
-  
+
   span {
     padding-left: 0.5rem;
     white-space: nowrap;
@@ -55,6 +56,19 @@ $nav-header-color: #628bb1;
   align-items: center;
 
   padding: 0 1rem 0 1rem;
+}
+
+.header-nav-icon {
+  width: 12rem;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 25px;
+}
+
+.rotate-icon {
+  transform: rotate(180deg);
+  justify-content: center;
+  width: 2rem;
 }
 
 // Main content
