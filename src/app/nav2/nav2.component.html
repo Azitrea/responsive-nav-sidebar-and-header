@@ -1,39 +1,38 @@
-<nav class="sidebar" [ngClass]="{ 'closed': isOpen }">
+<nav class="sidebar" [ngClass]="{ 'closed': !isOpen }">
   <div class="menu">
-    <div>Profile</div>
     <div class="menu-setup">
       <div class="menu-item">
-        <div>
+        <div class="icon">
           <i class="fas fa-cat"></i>
         </div>
         <span>menu 1</span>
       </div>
       <div class="menu-item">
-        <div>
+        <div class="icon">
           <i class="fas fa-cocktail"></i>
         </div>
         <span>menu 2</span>
       </div>
       <div class="menu-item">
-        <div>
+        <div class="icon">
           <i class="fas fa-cookie-bite"></i>
         </div>
         <span>menu 3</span>
       </div>
       <div class="menu-item">
-        <div>
+        <div class="icon">
           <i class="fas fa-crow"></i>
         </div>
         <span>menu 4</span>
       </div>
       <div class="menu-item">
-        <div>
+        <div class="icon">
           <i class="fas fa-crown"></i>
         </div>
         <span>menu 5</span>
       </div>
       <div class="menu-item">
-        <div>
+        <div class="icon">
           <i class="fas fa-dragon"></i>
         </div>
         <span>menu 6</span>
@@ -44,7 +43,7 @@
 
 <header class="header">
   <div class="header-content">
-    <div (click)="toggleSideNav()" class="header-nav-icon" [ngClass]="{'rotate-icon': isOpen}">
+    <div (click)="toggleSideNav()" class="header-nav-icon" [ngClass]="{'rotate-icon': !isOpen}">
       <i class="fas fa-angle-double-left"></i>
     </div>
     <div>Header</div>

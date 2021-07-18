@@ -5,6 +5,7 @@ $header-height: 3rem;
 
 $nav-sidebar-color: #526475;
 $nav-header-color: #628bb1;
+$nav-hover-bg-color: #74a3cf;
 
 // Sidebar
 .sidebar {
@@ -20,21 +21,41 @@ $nav-header-color: #628bb1;
 
 .menu {
   height: 100%;
-  padding: 1rem 0 0 1rem;
   overflow: hidden;
 }
 
 .menu-item {
   display: flex;
 
+  .icon {
+    min-width: 4rem;
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   span {
     padding-left: 0.5rem;
     white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+}
+
+.menu-item:hover {
+  cursor: pointer;
+  background-color: $nav-hover-bg-color;
 }
 
 .sidebar.closed {
   width: $sidebar-width-closed;
+}
+
+.sidebar.closed:hover {
+  width: $sidebar-width-open;
 }
 
 // Header
@@ -63,6 +84,7 @@ $nav-header-color: #628bb1;
   display: flex;
   justify-content: flex-end;
   font-size: 25px;
+  cursor: pointer;
 }
 
 .rotate-icon {
@@ -80,4 +102,32 @@ $nav-header-color: #628bb1;
 
 .sidebar.closed ~ .main-content {
   margin-left: $sidebar-width-closed;
+}
+
+/* @media screen and (max-width: 1366px) {
+  .sidebar.closed {
+    width: $sidebar-width-closed;
+  }
+
+  .main-content {
+    margin-left: $sidebar-width-closed;
+  }
+
+  .sidebar.closed ~ .main-content {
+    margin-left: $sidebar-width-closed;
+  }
+} */
+
+@media screen and (max-width: 768px) {
+  .sidebar.closed {
+    width: 0rem;
+  }
+
+  .main-content {
+    margin-left: 0rem;
+  }
+
+  .sidebar.closed ~ .main-content {
+    margin-left: 0rem;
+  }
 }

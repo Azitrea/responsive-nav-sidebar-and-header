@@ -10,8 +10,7 @@ export class Nav2Component implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   toggleSideNav(): void {
     this.isOpen = !this.isOpen;
