@@ -1,7 +1,13 @@
-$header-height: 3rem;
+$header-height: 4rem;
 
 $nav-header-color: #628bb1;
 $nav-hover-bg-color: #74a3cf;
+
+$nav-menu-width: 12rem;
+
+.nav1-container {
+  position: relative;
+}
 
 // Header
 .header {
@@ -18,14 +24,101 @@ $nav-hover-bg-color: #74a3cf;
   color: white;
   height: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  white-space: nowrap;
 
   padding: 0 1rem 0 1rem;
+
+  .hamburger-menu-open-icon {
+    display: none;
+  }
+}
+
+.header-menu {
+  display: flex;
+  height: 100%;
+
+  div {
+    padding: 0 2.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $nav-hover-bg-color;
+    }
+  }
+
+  .hamburger-menu-close-icon {
+    display: none;
+  }
 }
 
 // Main content
 .main-content {
   margin-top: $header-height;
   transition: margin 0.3s ease;
+}
+
+// Backdrop
+.main-backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+
+  z-index: 8;
+
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .header-menu {
+    display: block;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 11;
+    width: 0;
+    transition: width 0.3s ease;
+
+    background-color: $nav-header-color;
+    overflow: hidden;
+
+    div {
+      padding: 0 0rem;
+      min-height: 3rem;
+      min-width: $nav-menu-width;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hamburger-menu-close-icon {
+      height: $header-height;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.7rem;
+    }
+
+    &.opened {
+      border-left: 1px solid #ebebeb;
+      width: $nav-menu-width;
+    }
+  }
+
+  .header-content {
+    .hamburger-menu-open-icon {
+      display: block;
+      width: 2rem;
+      font-size: 1.7rem;
+    }
+  }
 }

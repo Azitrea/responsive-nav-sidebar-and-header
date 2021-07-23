@@ -104,20 +104,6 @@ $nav-hover-bg-color: #74a3cf;
   margin-left: $sidebar-width-closed;
 }
 
-/* @media screen and (max-width: 1366px) {
-  .sidebar.closed {
-    width: $sidebar-width-closed;
-  }
-
-  .main-content {
-    margin-left: $sidebar-width-closed;
-  }
-
-  .sidebar.closed ~ .main-content {
-    margin-left: $sidebar-width-closed;
-  }
-} */
-
 @media screen and (max-width: 768px) {
   .sidebar.closed {
     width: 0rem;
